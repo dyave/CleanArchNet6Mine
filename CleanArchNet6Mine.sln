@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchNet6Mine.Web", "CleanArchNet6Mine\CleanArchNet6Mine.Web.csproj", "{64D768B0-34C8-47FE-99ED-9CE1DA81B853}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64D768B0-34C8-47FE-99ED-9CE1DA81B853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D768B0-34C8-47FE-99ED-9CE1DA81B853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D768B0-34C8-47FE-99ED-9CE1DA81B853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D768B0-34C8-47FE-99ED-9CE1DA81B853}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {947CC165-0BCC-459C-A2AE-BF08BEB7F8F1}
+	EndGlobalSection
+EndGlobal
