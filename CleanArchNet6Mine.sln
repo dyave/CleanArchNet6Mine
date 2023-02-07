@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchNet6Mine.Web", "CleanArchNet6Mine\CleanArchNet6Mine.Web.csproj", "{64D768B0-34C8-47FE-99ED-9CE1DA81B853}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchNet6Mine.Infrastructure", "CleanArchNet6Mine.Infrastructure\CleanArchNet6Mine.Infrastructure.csproj", "{0C7E811B-BD12-4CF8-A371-6B7DFD32F219}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{64D768B0-34C8-47FE-99ED-9CE1DA81B853}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64D768B0-34C8-47FE-99ED-9CE1DA81B853}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64D768B0-34C8-47FE-99ED-9CE1DA81B853}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C7E811B-BD12-4CF8-A371-6B7DFD32F219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C7E811B-BD12-4CF8-A371-6B7DFD32F219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C7E811B-BD12-4CF8-A371-6B7DFD32F219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C7E811B-BD12-4CF8-A371-6B7DFD32F219}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
