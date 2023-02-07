@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CleanArchNet6Mine.Infrastructure.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchNet6Mine.Infrastructure
 {
@@ -41,13 +42,5 @@ namespace CleanArchNet6Mine.Infrastructure
                     .HasComment("Date and time the record was last updated.");
             });
         }
-    }
-
-    public partial class BuildVersion
-    {
-        public byte SystemInformationId { get; set; }
-        public string DatabaseVersion { get; set; } = null!;
-        public DateTime VersionDate { get; set; }
-        public DateTime ModifiedDate { get; set; }
     }
 }
