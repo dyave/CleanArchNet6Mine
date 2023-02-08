@@ -1,4 +1,4 @@
-namespace CleanArchNet6Mine.Web
+namespace CleanArchNet6Mine.Web.ApiModels
 {
     public class WeatherForecast
     {

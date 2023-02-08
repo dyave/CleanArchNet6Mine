@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchNet6Mine.Web", "CleanArchNet6Mine\CleanArchNet6Mine.Web.csproj", "{64D768B0-34C8-47FE-99ED-9CE1DA81B853}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchNet6Mine.Web", "CleanArchNet6Mine.Web\CleanArchNet6Mine.Web.csproj", "{64D768B0-34C8-47FE-99ED-9CE1DA81B853}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchNet6Mine.Infrastructure", "CleanArchNet6Mine.Infrastructure\CleanArchNet6Mine.Infrastructure.csproj", "{0C7E811B-BD12-4CF8-A371-6B7DFD32F219}"
 EndProject
