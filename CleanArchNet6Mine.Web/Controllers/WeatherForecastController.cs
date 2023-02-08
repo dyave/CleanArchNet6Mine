@@ -1,5 +1,5 @@
 using CleanArchNet6Mine.Infrastructure;
-using CleanArchNet6Mine.Web.ApiModels;
+using CleanArchNet6Mine.Infrastructure.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchNet6Mine.Web.Controllers
@@ -15,22 +15,19 @@ namespace CleanArchNet6Mine.Web.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
         private readonly AppDbContext _context;
+        private readonly Mediator _mediator;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, AppDbContext context)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, AppDbContext context, Mediator mediator)
         {
             _logger = logger;
             _context = context;
+            _mediator = mediator;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-            var bv = _context.BuildVersions.FirstOrDefault();
-            BuildVersionDto bvd = new BuildVersionDto()
-            {
-                SystemInformationId = bv.SystemInformationId,
-                DatabaseVersion = bv.DatabaseVersion
-            };
+            var bvDto = _mediator.GetBuildVersion();
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

@@ -1,4 +1,4 @@
-﻿namespace CleanArchNet6Mine.Web.ApiModels;
+﻿namespace CleanArchNet6Mine.Infrastructure.Dtos;
 
 public class BuildVersionDto
 {
