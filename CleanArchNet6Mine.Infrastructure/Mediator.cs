@@ -1,5 +1,4 @@
 ﻿using CleanArchNet6Mine.Infrastructure.Dtos;
-using CleanArchNet6Mine.Infrastructure.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,12 +17,12 @@ public class Mediator
 
 	public BuildVersionDto GetBuildVersion()
 	{
-        var bv = _context.BuildVersions.FirstOrDefault();
-        BuildVersionDto bvDto = new BuildVersionDto()
-        {
-            SystemInformationId = bv.SystemInformationId,
-            DatabaseVersion = bv.DatabaseVersion
-        };
+		var bv = _context.BuildVersions.FirstOrDefault();
+		BuildVersionDto bvDto = new BuildVersionDto()
+		{
+			SystemInformationId = bv.SystemInformationId,
+			DatabaseVersion = bv.DatabaseVersion
+		};
 		return bvDto;
     }
 }
