@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 var builder = WebApplication.CreateBuilder(args);
 string connectionString = builder.Configuration.GetConnectionString("AdventureWorks");
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext(connectionString);
 builder.Services.AddScoped<Mediator>();
 builder.Services.AddControllers();

@@ -1,5 +1,7 @@
-﻿using CleanArchNet6Mine.Infrastructure;
+﻿using AutoMapper;
+using CleanArchNet6Mine.Infrastructure;
 using CleanArchNet6Mine.Infrastructure.Models;
+using CleanArchNet6Mine.Web.ApiModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,24 +13,25 @@ namespace CleanArchNet6Mine.Web.Controllers;
 public class ProductDescriptionsController : ControllerBase
 {
     private readonly AppDbContext _context;
-    private readonly Mediator _mediator;
+    private readonly IMapper _mapper;
 
-    public ProductDescriptionsController(AppDbContext context, Mediator mediator)
+    public ProductDescriptionsController(AppDbContext context, IMapper mapper)
     {
         _context = context;
-        _mediator = mediator;
+        _mapper = mapper;
     }
 
     // GET: api/ProductDescriptions
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<ProductDescription>>> GetProductDescriptions()
+    public async Task<ActionResult<IEnumerable<ProductDescriptionDto>>> GetProductDescriptions()
     {
-        return await _context.ProductDescriptions.ToListAsync();
+        var pds = await _context.ProductDescriptions.ToListAsync();
+        return _mapper.Map<List<ProductDescriptionDto>>(pds);
     }
 
     // GET: api/ProductDescriptions/5
     [HttpGet("{id}")]
-    public async Task<ActionResult<ProductDescription>> GetProductDescription(int id)
+    public async Task<ActionResult<ProductDescriptionDto>> GetProductDescription(int id)
     {
         var productDescription = await _context.ProductDescriptions.FindAsync(id);
 
@@ -37,7 +40,7 @@ public class ProductDescriptionsController : ControllerBase
             return NotFound();
         }
 
-        return productDescription;
+        return _mapper.Map<ProductDescriptionDto>(productDescription);
     }
 
     // PUT: api/ProductDescriptions/5
